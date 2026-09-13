@@ -1,6 +1,14 @@
 Binary Watch for Linux 
-A native GTK 3 desktop clock with the upright LED arrangement of Newson’s Electronics’ binary watch. Original application code; no downloaded watch
+
+
+A native GTK 3 desktop clock with the upright LED arrangement of Newson’s Electronics’ binary watch. 
+
+[https://www.instructables.com/A-Watch-for-Nerds-the-Binary-Watch](https://www.instructables.com/A-Watch-for-Nerds-the-Binary-Watch)
+
+Original application code; no downloaded watch
 code or images are bundled. 
+
+
 Run 
 Open a terminal in this folder and run: 
 ./launch.sh
