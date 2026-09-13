@@ -194,12 +194,20 @@ def main():
                 message_type=Gtk.MessageType.INFO, buttons=Gtk.ButtonsType.CLOSE,
                 text='Read time like the binary watch')
             dialog.format_secondary_text(
+                'This program lets you see how the original binary watch would look '
+                'running in real time. The watch design originated with Newson’s Electronics, '
+                'whose project “A Watch for Nerds: the Binary Watch” is published on Instructables.\n\n'
                 'Left to right: hours (red), minutes (yellow), seconds (green).\n\n'
                 'Top to bottom: 32, 16, 8, 4, 2, 1. Add the lit values in each column. '
                 'For example, 16 + 2 = 18 hours.\n\n'
                 'Uses your computer’s local time in 24-hour format. The watch’s blue '
-                'battery warning is not simulated.\n\nF11: fullscreen. Escape: leave fullscreen.\n\n'
-                'Inspired by Newson’s Electronics, “A Watch for Nerds: the Binary Watch” on Instructables.')
+                'battery warning is not simulated.\n\nF11: fullscreen. Escape: leave fullscreen.')
+            source_link = Gtk.LinkButton.new_with_label(
+                'https://www.instructables.com/A-Watch-for-Nerds-the-Binary-Watch',
+                'View the original watch project by Newson’s Electronics')
+            source_link.set_halign(Gtk.Align.CENTER)
+            dialog.get_content_area().pack_start(source_link, False, False, 8)
+            source_link.show()
             dialog.run()
             dialog.destroy()
 
